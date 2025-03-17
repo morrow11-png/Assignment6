@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment 6</title>
+</head>
+<body>
+
+    <h2>STUDENT REGISTRATION FORM</h2>
+
+    <form>
+        <label for="first-name">FIRST NAME:</label>
+        <input type="text" id="first-name" name="first-name" maxlength="30"> (max 30 characters a-z and A-Z)
+
+        <br><br>
+
+        <label for="last-name">LAST NAME:</label>
+        <input type="text" id="last-name" name="last-name" maxlength="30"> (max 30 characters a-z and A-Z)
+
+        <br><br>
+
+        <label for="dob">DATE OF BIRTH:</label>
+        <select id="day" name="day">
+            <option>Day</option>
+            <script>
+                for (let i = 1; i <= 31; i++) {
+                    document.write('<option>' + i + '</option>');
+                }
+            </script>
+        </select>
+        <select id="month" name="month">
+            <option>Month</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </select>
+        <select id="year" name="year">
+            <option>Year</option>
+            <script>
+                let currentYear = new Date().getFullYear();
+                for (let i = currentYear; i >= 1900; i--) {
+                    document.write('<option>' + i + '</option>');
+                }
+            </script>
+        </select>
+
+        <br><br>
+
+        <label for="email">EMAIL ID:</label>
+        <input type="email" id="email" name="email">
+
+        <br><br>
+
+        <label for="mobile">MOBILE NUMBER:</label>
+        <input type="text" id="mobile" name="mobile" maxlength="10"> (10 digit number)
+
+        <br><br>
+
+        <label>GENDER:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <br><br>
+
+        <label for="address">ADDRESS:</label>
+        <textarea id="address" name="address"></textarea>
+
+        <br><br>
+
+        <label for="city">CITY:</label>
+        <input type="text" id="city" name="city" maxlength="30"> (max 30 characters a-z and A-Z)
+
+        <br><br>
+
+        <label for="pin">PIN CODE:</label>
+        <input type="text" id="pin" name="pin" maxlength="6"> (6 digit number)
+
+        <br><br>
+
+        <label for="state">STATE:</label>
+        <input type="text" id="state" name="state" maxlength="30"> (max 30 characters a-z and A-Z)
+
+        <br><br>
+
+        <label for="country">COUNTRY:</label>
+        <input type="text" id="country" name="country">
+
+        <br><br>
+
+        <label>HOBBIES:</label>
+        <input type="checkbox" id="drawing" name="hobbies" value="Drawing">
+        <label for="drawing">Drawing</label>
+        <input type="checkbox" id="singing" name="hobbies" value="Singing">
+        <label for="singing">Singing</label>
+        <input type="checkbox" id="dancing" name="hobbies" value="Dancing">
+        <label for="dancing">Dancing</label>
+        <input type="checkbox" id="sketching" name="hobbies" value="Sketching">
+        <label for="sketching">Sketching</label>
+        <label for="others">Others</label>
+        <input type="text" id="others" name="others" maxlength="30">
+
+        <br><br>
+
+        <label>QUALIFICATION:</label>
+        <table border="1">
+            <tr>
+                <th>Sl.No.</th>
+                <th>Examination</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Class X</td>
+                <td><input type="text" name="board1" maxlength="10"></td>
+                <td><input type="text" name="percentage1" maxlength="5"></td>
+                <td><input type="text" name="year1" maxlength="4"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Class XII</td>
+                <td><input type="text" name="board2" maxlength="10"></td>
+                <td><input type="text" name="percentage2" maxlength="5"></td>
+                <td><input type="text" name="year2" maxlength="4"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Graduation</td>
+                <td><input type="text" name="board3" maxlength="10"></td>
+                <td><input type="text" name="percentage3" maxlength="5"></td>
+                <td><input type="text" name="year3" maxlength="4"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Masters</td>
+                <td><input type="text" name="board4" maxlength="10"></td>
+                <td><input type="text" name="percentage4" maxlength="5"></td>
+                <td><input type="text" name="year4" maxlength="4"></td>
+            </tr>
+        </table>
+
+        <br><br>
+
+        <label>COURSES APPLIED FOR:</label>
+        <input type="radio" id="bca" name="course" value="BCA">
+        <label for="bca">BCA</label>
+        <input type="radio" id="bcom" name="course" value="B.Com">
+        <label for="bcom">B.Com</label>
+        <input type="radio" id="bsc" name="course" value="B.Sc">
+        <label for="bsc">B.Sc</label>
+        <input type="radio" id="ba" name="course" value="B.A">
+        <label for="ba">B.A</label>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+</body>
+</html>
